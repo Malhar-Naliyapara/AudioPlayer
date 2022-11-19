@@ -1,0 +1,29 @@
+<mat-card *ngFor="let music of music?. result5; let index = index">
+    <mat-card-header>
+    <div class="icon-actions">
+    <mat-icon>favorite</mat-icon>
+    <mat-icon>share</mat-icon>
+    <mat-icon>turned_inc</mat-icon>
+    <mat-icon>highlight_offer</mat-icon>
+    </div>
+    </mat-card-header>
+    <img mat-card-img [src]="music.artworkUrl100">
+    <mat-card-content>
+    <audio cont ro ls [id] ="index">
+    <source [src] ="music.previemUrl" type="audio/ogg">
+    <source (src] ="music.previewUrl" type="audio/mpeg">
+    </audio>
+    <div class="card-details">
+    <h4>{{ music.trackName }}</h4>
+    <p>Artist : {{music.artistName)} </p>
+    <p>Album: {{ music.collectionName }} </p>
+    <p>Country: {{ music.country }} </p>
+    <p>Track No : {{ music.trackNumber }} </p>
+    <p>Genre: {{ music.primaryGenreName }} </p>
+    </div>
+    </mat-card-content>
+    <mat-card-actions>
+    <button #stopBtn mat-but ton color="primary" (click)="stopSong(music) ">STOP</button>
+    <button #playBtn mat-flat-button color="primary" (click)="playSong(music)">PLAY</button>
+    </mat-card-actions>
+</mat-card>
